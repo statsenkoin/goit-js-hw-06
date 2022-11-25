@@ -21,6 +21,7 @@ const galleryContent = images.map((item) => {
 });
 
 galleryList.insertAdjacentHTML('afterbegin', galleryContent.join(''));
+
 galleryList.style.display = 'flex';
 galleryList.style.listStyle = 'none';
 galleryList.style.gap = '20px';
