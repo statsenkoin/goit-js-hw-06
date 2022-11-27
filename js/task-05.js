@@ -1,8 +1,12 @@
-const nameInput = document.querySelector('#name-input');
-console.log(nameInput.textContent);
+const nameInputEl = document.querySelector('#name-input');
+const nameOutputEl = document.querySelector('#name-output');
 
-const nameOutput = document.querySelector('#name-output');
-console.log(nameOutput.textContent);
+const defaultOutput = nameOutputEl.textContent;
 
-const defaultOutput = nameOutput.textContent;
-console.log(defaultOutput);
+nameInputEl.addEventListener('input', onUpdateOutput);
+
+function onUpdateOutput(event) {
+  nameOutputEl.textContent = event.currentTarget.value
+    ? event.currentTarget.value
+    : defaultOutput; // або 'Anonymous', тоді змінна defaultOutput не потрібна
+}
