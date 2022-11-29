@@ -5,13 +5,30 @@ form.addEventListener('submit', onFormSubmit);
 function onFormSubmit(event) {
   event.preventDefault();
 
-  const email = form.elements.email.value;
-  const password = form.elements.password.value;
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
 
-  if (!email || !password) {
-    alert('Fill all required fields');
+  if (!email.value || !password.value) {
+    alert('Fill in all required fields');
   } else {
-    console.log({ email, password });
+    const userCredentials = { email: email.value, password: password.value };
+    console.log(userCredentials);
+
     form.reset();
   }
 }
+
+// function onFormSubmit(event) {
+//   event.preventDefault();
+
+//   const email = form.elements.email.value;
+//   const password = form.elements.password.value;
+
+//   if (!email || !password) {
+//     alert('Fill in all required fields');
+//   } else {
+//     form.reset();
+//   }
+//   console.log({ email, password });
+// }
