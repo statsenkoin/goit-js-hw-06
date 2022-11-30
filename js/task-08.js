@@ -28,7 +28,7 @@ function onFormSubmit(event) {
 //   if (!email || !password) {
 //     alert('Fill in all required fields');
 //   } else {
+//     console.log({ email, password });
 //     form.reset();
 //   }
-//   console.log({ email, password });
 // }
