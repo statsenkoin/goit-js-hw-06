@@ -24,6 +24,7 @@ function createBoxes(amount) {
     newBox += `<div style="width: ${boxSize}px; height: ${boxSize}px; background-color: ${bgColor}"></div>`;
   }
   boxes.insertAdjacentHTML('beforeend', newBox);
+  inputNumber.value = ''; //bugFix
 }
 
 function destroyBoxes() {
