@@ -25,6 +25,7 @@ function createBoxes(amount) {
   }
   boxes.insertAdjacentHTML('beforeend', newBox);
   inputNumber.value = ''; //bugFix
+  numberOfBoxes = 0; //bugFix
 }
 
 function destroyBoxes() {
